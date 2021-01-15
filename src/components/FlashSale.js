@@ -1,10 +1,10 @@
-import { Box, Typography } from '@material-ui/core'
+import { Box, Container, Typography } from '@material-ui/core'
 import React from 'react'
 import FlashSaleCard from './cards/FlashSaleCard'
 
 export default function FlashSale() {
     return (
-        <Box overflow='scroll' width='100vw'>
+        <Container fixed>
             <Box bgcolor='#000' height={'2px'}/>
             <Box bgcolor='#F9C74F' height={'2px'} />
             <Box display='flex' justifyContent={'space-between'} p={2}>
@@ -18,6 +18,6 @@ export default function FlashSale() {
             </Box>
             <Box bgcolor='#000' height={'2px'} mt={2}/>
             <Box bgcolor='#F9C74F' height={'2px'} mb={5}/>
-        </Box>
+        </Container>
     )
 }
