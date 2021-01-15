@@ -11,6 +11,8 @@ export default function index() {
             <Route exact path='/home' component={HomePage}/>
             <Route exact path='/home/login' component={LoginPage}/>
             <Route exact path='/home/register' component={RegisterPage}/>
+            <Route exact path='/home/productListpage' component={RegisterPage}/>
+
         </HomeLayout>
     )
 }
