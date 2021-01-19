@@ -1,10 +1,12 @@
-import { Box, Container, Typography } from '@material-ui/core'
+import { Box, Container, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import FlashSaleCard from './cards/FlashSaleCard'
 
 export default function FlashSale() {
+    const theme=useTheme();
+    const matches=useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <Container fixed>
+        <Container fixed style={matches?{maxWidth:'400px'}:{}}>
             <Box bgcolor='#000' height={'2px'}/>
             <Box bgcolor='#F9C74F' height={'2px'} />
             <Box display='flex' justifyContent={'space-between'} p={2}>

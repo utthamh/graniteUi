@@ -9,7 +9,7 @@ import './style.css'
 import MyRoutes from './pages'
 export default function App() {
   return (
-    <Router>
+    <Router basename='graniteUi'>
         <Switch>
           <MyRoutes/>
         </Switch>

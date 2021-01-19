@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import Navbar from '../headers/Navbar'
 import Footer from '../footer/footer'
-import { Container } from '@material-ui/core'
+import { Box, Container } from '@material-ui/core'
+import Subscribe from '../Subscribe'
 
 export default function HomeLayout({children}) {
 
@@ -10,6 +11,8 @@ export default function HomeLayout({children}) {
             <header><Navbar/></header>
             <Container fixed>
                 {children}
+                <Box mb={5}/>
+            <Subscribe/>
             </Container>
             <footer><Footer/></footer>
         </div>

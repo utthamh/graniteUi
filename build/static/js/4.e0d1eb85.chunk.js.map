@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/admin/index.js"],"names":["index"],"mappings":"2JAEe,SAASA,IACpB,OACI","file":"static/js/4.e0d1eb85.chunk.js","sourcesContent":["import React from 'react'\r\n\r\nexport default function index() {\r\n    return (\r\n        <div>\r\n            admin\r\n        </div>\r\n    )\r\n}\r\n"],"sourceRoot":""}

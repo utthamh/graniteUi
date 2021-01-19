@@ -22,8 +22,7 @@ export default function HomePage() {
             <Services/> 
             </Box>
             <HowItWorks/>
-            <Box mb={5}/>
-            <Subscribe/>
+           
         </>
     )
 }

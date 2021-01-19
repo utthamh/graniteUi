@@ -3,13 +3,7 @@ import React from 'react'
 import { MyCheckBox, MyInput, MyPassword, MyRadioButton, MySelect } from './MyInput'
 
 
-const useStyles = makeStyles((theme) => ({
-    root:{
-        '& .MuiInputBase-multiline':{
-           // padding:0
-          }
-    }
-  }));
+
   
 function GetInput({type,value,...props}){
     switch(type){
