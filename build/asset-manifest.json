@@ -1,0 +1,39 @@
+{
+  "files": {
+    "static/js/0.ba473f9a.chunk.js": "/graniteUi/static/js/0.ba473f9a.chunk.js",
+    "static/js/0.ba473f9a.chunk.js.map": "/graniteUi/static/js/0.ba473f9a.chunk.js.map",
+    "main.css": "/graniteUi/static/css/main.5e1a3178.chunk.css",
+    "main.js": "/graniteUi/static/js/main.211edb8d.chunk.js",
+    "main.js.map": "/graniteUi/static/js/main.211edb8d.chunk.js.map",
+    "runtime-main.js": "/graniteUi/static/js/runtime-main.40b74b40.js",
+    "runtime-main.js.map": "/graniteUi/static/js/runtime-main.40b74b40.js.map",
+    "static/js/3.0096e44f.chunk.js": "/graniteUi/static/js/3.0096e44f.chunk.js",
+    "static/js/3.0096e44f.chunk.js.map": "/graniteUi/static/js/3.0096e44f.chunk.js.map",
+    "static/js/4.1d73d617.chunk.js": "/graniteUi/static/js/4.1d73d617.chunk.js",
+    "static/js/4.1d73d617.chunk.js.map": "/graniteUi/static/js/4.1d73d617.chunk.js.map",
+    "static/js/5.09f46225.chunk.js": "/graniteUi/static/js/5.09f46225.chunk.js",
+    "static/js/5.09f46225.chunk.js.map": "/graniteUi/static/js/5.09f46225.chunk.js.map",
+    "static/js/6.7ab36b36.chunk.js": "/graniteUi/static/js/6.7ab36b36.chunk.js",
+    "static/js/6.7ab36b36.chunk.js.map": "/graniteUi/static/js/6.7ab36b36.chunk.js.map",
+    "static/js/7.bb083aa4.chunk.js": "/graniteUi/static/js/7.bb083aa4.chunk.js",
+    "static/js/7.bb083aa4.chunk.js.map": "/graniteUi/static/js/7.bb083aa4.chunk.js.map",
+    "static/js/8.459315bb.chunk.js": "/graniteUi/static/js/8.459315bb.chunk.js",
+    "static/js/8.459315bb.chunk.js.map": "/graniteUi/static/js/8.459315bb.chunk.js.map",
+    "static/js/9.23c2aaaf.chunk.js": "/graniteUi/static/js/9.23c2aaaf.chunk.js",
+    "static/js/9.23c2aaaf.chunk.js.map": "/graniteUi/static/js/9.23c2aaaf.chunk.js.map",
+    "index.html": "/graniteUi/index.html",
+    "static/css/main.5e1a3178.chunk.css.map": "/graniteUi/static/css/main.5e1a3178.chunk.css.map",
+    "static/js/0.ba473f9a.chunk.js.LICENSE.txt": "/graniteUi/static/js/0.ba473f9a.chunk.js.LICENSE.txt",
+    "static/js/3.0096e44f.chunk.js.LICENSE.txt": "/graniteUi/static/js/3.0096e44f.chunk.js.LICENSE.txt",
+    "static/js/4.1d73d617.chunk.js.LICENSE.txt": "/graniteUi/static/js/4.1d73d617.chunk.js.LICENSE.txt",
+    "static/js/5.09f46225.chunk.js.LICENSE.txt": "/graniteUi/static/js/5.09f46225.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/graniteUi/static/media/logo.f350ff19.png",
+    "static/media/sunbscribe.10a1a5d5.png": "/graniteUi/static/media/sunbscribe.10a1a5d5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40b74b40.js",
+    "static/js/4.1d73d617.chunk.js",
+    "static/css/main.5e1a3178.chunk.css",
+    "static/js/main.211edb8d.chunk.js"
+  ]
+}

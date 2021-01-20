@@ -1,41 +1,83 @@
-import { Box, Grid, Paper, Typography, useTheme } from '@material-ui/core'
+import {makeStyles} from '@material-ui/core'
 import React, { useState } from 'react'
-import DashboardHeader from '../headers/DashboardHeader'
+import Navbar from '../headers/DashboardHeader'
 import Sidebar from '../sidebar/Sidebar'
-import Table from '../tables/Table'
-export default function DashboardLayout() {
-    const [open,setDrawerOpen]=useState(false)
-    const theme=useTheme()
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex"
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0
+    }
+  },
+   searchInput: {
+        opacity: '0.6',
+        padding: `0px ${theme.spacing(1)}px`,
+        fontSize: '0.8rem',
+        '&:hover': {
+            backgroundColor: '#f2f2f2'
+        },
+        '& .MuiSvgIcon-root': {
+            marginRight: theme.spacing(1)
+        }
+    },
+  appBar: {
+   
+    backgroundColor:'#fff',
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth
+    }
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none"
+    }
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    backgroundColor:'aliceblue',
+    minHeight:'100vh'
+  },
+  nested: {
+    paddingLeft: theme.spacing(4)
+  },
+  active:{
+    backgroundColor:theme.palette.secondary.main
+  }
+}));
+
+export default function DashboardLayout({children,menus}) {
+    const classes = useStyles();
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+      setMobileOpen(!mobileOpen);
+    };
     return (
-        <div>
-            <DashboardHeader openDrawer={setDrawerOpen}/>
-            
-            <Box display='flex'>
-                
-            <Sidebar drawerOpen={open} closeDrawer={()=>setDrawerOpen(v=>!v)}/>
-           
-            <Box  flex='1' p={3}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} >
-                        <Paper variant='outlined' >
-                            <Box my={1} mx={2}>
-                            <Typography variant='h6'>Heading</Typography>
-                            </Box>
-                        </Paper>
-                        
-                    </Grid>
-                    <Grid item xs={12} >
-                        <Paper variant='outlined' >
-                            <Box my={1} mx={2}>
-                            <Table/>
-                            </Box>
-                        </Paper>
-                        
-                    </Grid>
-                    </Grid>
-                </Box>
-                </Box>
-            
+        <div className={classes.root}>
+           <Navbar classes={classes} handleDrawerToggle={handleDrawerToggle} />
+      <Sidebar
+        menus={menus}
+        classes={classes}
+        mobileOpen={mobileOpen}
+        handleDrawerToggle={handleDrawerToggle}
+      /> 
+      <main className={classes.content}>
+        {children}
+      </main>
         </div>
     )
 }

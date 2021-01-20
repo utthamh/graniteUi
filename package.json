@@ -17,11 +17,13 @@
     "clsx": "latest",
     "material-table": "^1.69.2",
     "mui-datatables": "^3.7.4",
+    "namor": "^2.0.2",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "^5.2.0",
     "react-scripts": "latest",
-    "react-swipeable-views": "^0.13.9"
+    "react-swipeable-views": "^0.13.9",
+    "react-table": "^7.6.3"
   },
   "browserslist": {
     "production": [

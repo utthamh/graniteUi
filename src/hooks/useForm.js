@@ -1,55 +1,57 @@
 import React, { useState } from 'react'
+import { makeStyles } from "@material-ui/core";
 
-export default function useForm(initialValues,validations={}) {
-    const [values,setvalues]=useState(initialValues||{})
-    const [errors,setErrors]=useState({});
-    const validation=validations
-    
-    const handleChange=(e)=>{
-        let {name,value,files}=e.target;
-        value=files?files[0]:value;
-        if(typeof(value)!='object'){
-            checkValidation(name,value)
+export function useForm(initialFValues, validateOnChange = false, validate) {
+
+
+    const [values, setValues] = useState(initialFValues);
+    const [errors, setErrors] = useState({});
+
+    const handleInputChange = e => {
+        const { name, value } = e.target
+        setValues({
+            ...values,
+            [name]: value
+        })
+        if (validateOnChange)
+            validate({ [name]: value })
+    }
+
+    const resetForm = () => {
+        setValues(initialFValues);
+        setErrors({})
+    }
+
+
+    return {
+        values,
+        setValues,
+        errors,
+        setErrors,
+        handleInputChange,
+        resetForm
+
+    }
+}
+
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        '& .MuiFormControl-root': {
+            width: '80%',
+            margin: theme.spacing(1)
         }
-        setvalues(v=>({...v,[name]:value}))
-        
     }
-    const checkValidation=(name,value)=>{
-        if(validation[name]){      
-            
-                if(new RegExp(validation[name]?.matches).test(value)){
-                    delete errors[name];
-                }
-                
-                else
-                errors[name]=validation[name].message||"invalid input"
-                setErrors({...errors})
-                
-            }
-            
-    }
-    const reset=()=>{
-        setvalues(initialValues);
-    }
-    const myvalidation=(values)=>{
-       
-        Object.keys(values)?.map(item=>checkValidation(item,values[item]))
-    }
+}))
 
-    
-    const handleSubmit=(callback)=>{
-        console.log('errrord')
-        console.log(errors)
-        if(Object.keys(validation)?.length!==0)
-               myvalidation(values)
-        if(Object.keys(errors)?.length===0){callback()}
-    }
+export function Form(props) {
+
+    const classes = useStyles();
+    const { children, ...other } = props;
     return (
-        {
-            values,
-            errors,
-            handleChange,
-            handleSubmit
-        }        
+        <form className={classes.root} autoComplete="off" {...other}>
+            {props.children}
+        </form>
     )
 }
+

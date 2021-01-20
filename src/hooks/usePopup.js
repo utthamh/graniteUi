@@ -1,6 +1,6 @@
 import React from 'react'
-import { Dialog, DialogTitle, DialogContent, makeStyles, Typography } from '@material-ui/core';
-import Controls from "../controls/Controls";
+import { Dialog, DialogTitle, DialogContent, makeStyles, Typography, Divider } from '@material-ui/core';
+import Controls from '../components/controls/Controls';
 import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles(theme => ({
@@ -13,27 +13,37 @@ const useStyles = makeStyles(theme => ({
         paddingRight: '0px'
     }
 }))
+export  function usePopup(title) {
+    
+    const [open, setOpen] = React.useState(false);
+    const openDialog = () => setOpen(true);
+  
+    const MyPopup=({children,...other})=><Popup title={title} openPopup={open} setOpenPopup={setOpen} {...other}>{children}</Popup>
+    return {MyPopup,openDialog}
+}
 
-export default function Popup(props) {
+function Popup(props) {
 
-    const { title, children, openPopup, setOpenPopup } = props;
+    const { title, children, openPopup, setOpenPopup,...other } = props;
     const classes = useStyles();
 
     return (
-        <Dialog open={openPopup} maxWidth="md" classes={{ paper: classes.dialogWrapper }}>
+        <Dialog open={openPopup}  classes={{ paper: classes.dialogWrapper }} {...other}>
             <DialogTitle className={classes.dialogTitle}>
                 <div style={{ display: 'flex' }}>
                     <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
                         {title}
                     </Typography>
                     <Controls.ActionButton
+                    variant='text'
                         color="secondary"
                         onClick={()=>{setOpenPopup(false)}}>
                         <CloseIcon />
                     </Controls.ActionButton>
                 </div>
             </DialogTitle>
-            <DialogContent dividers>
+            <Divider/>
+            <DialogContent >
                 {children}
             </DialogContent>
         </Dialog>
