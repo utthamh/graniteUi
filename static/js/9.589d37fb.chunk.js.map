@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/supplier/index.js"],"names":["index"],"mappings":"2JAEe,SAASA,IACpB,OACI","file":"static/js/9.589d37fb.chunk.js","sourcesContent":["import React from 'react'\r\n\r\nexport default function index() {\r\n    return (\r\n        <div>\r\n            supplier\r\n        </div>\r\n    )\r\n}\r\n"],"sourceRoot":""}
