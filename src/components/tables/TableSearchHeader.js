@@ -2,7 +2,7 @@ import React from 'react'
 import Controls from '../controls/Controls';
 import { AddIcCallOutlined, Search,Add as AddIcon } from '@material-ui/icons';
 import {Box, InputAdornment, Toolbar} from '@material-ui/core'
-export default  ({ filter, setFilter, classes }) => {
+export default  ({ filter, setFilter, classes,add }) => {
     return (
       <Toolbar>
                       <Controls.Input
@@ -18,13 +18,7 @@ export default  ({ filter, setFilter, classes }) => {
                           }}
                       />
                       <Box flex='1'/>
-                      <Controls.Button
-                          text="Add New"
-                          variant="outlined"
-                          startIcon={<AddIcon />}
-                          className={classes.newButton}
-                          onClick={() => { setOpenPopup(true); setRecordForEdit(null); }}
-                      />
+                      {add}
                   </Toolbar>
     );
   };

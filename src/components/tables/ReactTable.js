@@ -126,7 +126,7 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired
 };
 
-function Table({ columns, data }) {
+function Table({ columns, data,add }) {
   // Use the state and functions returned from useTable to build your UI
   const {
     getTableProps,
@@ -162,6 +162,7 @@ function Table({ columns, data }) {
       <TableSearchHeader
         filter={state.globalFilter}
         setFilter={setGlobalFilter}
+        add={add}
       classes={classes}
       />
       <TableContainer >
@@ -239,9 +240,9 @@ function Table({ columns, data }) {
   );
 }
 
-function App({data,columns}) {
+function App({data,columns,add}) {
  
-  return <Table columns={columns} data={data} />;
+  return <Table columns={columns} data={data} add={add}/>;
 }
 
 export default App;

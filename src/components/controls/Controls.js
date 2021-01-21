@@ -1,4 +1,5 @@
 import Input from "./Input";
+import {MyInput,MyPassword,MySelect} from "../formBuilding/MyInput";
 import RadioGroup from "./RadioGroup";
 import Select from "./Select";
 import Checkbox from "./Checkbox";
@@ -7,6 +8,9 @@ import Button from "./Button";
 import ActionButton from "./ActionButton";
 
 const Controls = {
+    MyInput,
+    MyPassword,
+    MySelect,
     Input,
     RadioGroup,
     Select,

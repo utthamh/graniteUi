@@ -10,13 +10,13 @@ const useStyles = makeStyles(theme => ({
         top: theme.spacing(5)
     },
     dialogTitle: {
-        paddingRight: '0px'
+        padding:0
     }
 }))
 export  function usePopup(title) {
     
     const [open, setOpen] = React.useState(false);
-    const openDialog = () => setOpen(true);
+    const openDialog = () => setOpen(v=>!v);
   
     const MyPopup=({children,...other})=><Popup title={title} openPopup={open} setOpenPopup={setOpen} {...other}>{children}</Popup>
     return {MyPopup,openDialog}
@@ -35,7 +35,6 @@ function Popup(props) {
                         {title}
                     </Typography>
                     <Controls.ActionButton
-                    variant='text'
                         color="secondary"
                         onClick={()=>{setOpenPopup(false)}}>
                         <CloseIcon />

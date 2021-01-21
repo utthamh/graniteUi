@@ -92,7 +92,7 @@ export default ({ classes, window, mobileOpen, handleDrawerToggle, menus }) => {
 };
 
 const SubMenu = ({ classes, menu }) => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);

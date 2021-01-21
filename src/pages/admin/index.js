@@ -2,6 +2,9 @@ import { Toolbar } from '@material-ui/core';
 import React from 'react'
 import { Route } from 'react-router-dom';
 import DashboardLayout from '../../components/layout/DashboardLayout'
+import BrandListPage from '../brand/BrandListPage';
+import CategoryPage from '../catergory/CategoryPage';
+import VarientListPage from '../varients/VarientListPage';
 import SubscriberPage from './SubscriberPage';
 import SubscriptionPage from './SubscriptionPage';
 
@@ -22,10 +25,16 @@ const menus = [
       ]
     },
     {
-      title: "name2"
+      title: "Category",
+      link:base+'/category'
     },
     {
-      title: "name3"
+      title: "Brands",
+      link:base+'/brand'
+    },
+    {
+      title: "Varient",
+      link:base+'/varient'
     },
     {
       title: "name4"
@@ -37,7 +46,20 @@ const Routes=[{
     component:SubscriptionPage
 },
 {
+  path:base+'/category',
+  component:CategoryPage
+},
+{
+  path:base+'/brand',
+  component:BrandListPage
+},
+{
+  path:base+'/varient',
+  component:VarientListPage
+},
+{
     path:base+'/',
+    exact:true,
     component:SubscriberPage
 }
 
