@@ -35,45 +35,45 @@ export default function CardTotalCard() {
       <CardContent >
      
       <CardActions style={{color:"black"}}>
-        <Button size="small" style={{color:"black"}}>
+        <Typography size="small" style={{color:"black"}}>
         Price ( 10 items )
-        </Button>
-        <Button size="small"  style={{marginLeft:"auto",color:"black"}}>
+        </Typography>
+        <Typography size="small"  style={{marginLeft:"auto",color:"black"}}>
           5000/-
-        </Button>
+        </Typography>
       </CardActions>
       <CardActions>
-        <Button size="small" style={{color:"black"}}>
+        <Typography size="small" style={{color:"black"}}>
         Discount
-        </Button>
-        <Button size="small"  style={{marginLeft:"auto",color:"black"}}>
+        </Typography>
+        <Typography size="small"  style={{marginLeft:"auto",color:"black"}}>
           2000/-
-        </Button>
+        </Typography>
       </CardActions>
       <CardActions>
-        <Button size="small" style={{color:"black"}}>
+        <Typography size="small" style={{color:"black"}}>
         Price ( 10 items )
-        </Button>
-        <Button size="small"  style={{marginLeft:"auto",color:"black"}}>
+        </Typography>
+        <Typography size="small"  style={{marginLeft:"auto",color:"black"}}>
           5000/-
-        </Button>
+        </Typography>
       </CardActions>
       <CardActions style={{color:"black"}}>
-        <Button size="small" style={{color:"black"}} >
+        <Typography size="small" style={{color:"black"}} >
         Delivery charges
-        </Button>
-        <Button size="small"  style={{marginLeft:"auto",color:"black"}}>
+        </Typography>
+        <Typography size="small"  style={{marginLeft:"auto",color:"black"}}>
           2,00/-
-        </Button>
+        </Typography>
       </CardActions>
       
       <CardActions style={{boxShadow: "1px 1px 0 2px  gray"}}>
-        <Button size="small" style={{color:"black"}} >
+        <Typography size="small" style={{color:"black"}} >
        <b>Total amount</b> 
-        </Button>
-        <Button size="small"  style={{marginLeft:"auto",color:"black"}}>
+        </Typography>
+        <Typography size="small"  style={{marginLeft:"auto",color:"black"}}>
         <b>  5,200/-</b> 
-        </Button>
+        </Typography>
       </CardActions>
       </CardContent>
     </Card>

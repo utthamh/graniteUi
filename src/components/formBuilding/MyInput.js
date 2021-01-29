@@ -10,9 +10,9 @@ const BootstrapInput = withStyles((theme) => ({
       },
       
      // position: 'relative',
-     background: '#FFFFFF',
-border: '0.5px solid rgba(0, 0, 0, 0.33)',
-boxSizing: 'border-box',
+      background: '#FFFFFF',
+      border: '0.5px solid rgba(0, 0, 0, 0.33)',
+      boxSizing: 'border-box',
       fontSize: 16,
       width: '100%',
       padding: '1px 10px',

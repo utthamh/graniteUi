@@ -58,24 +58,24 @@ export default function CartCard() {
                   Rs.2,500/- ..... 40% OFF
                 </Typography>
               </Grid>
-              <Grid item>
+              <Grid item >
               <ButtonGroup  disableElevation variant="contained" style={{}}>
-        <div  style={{paddingLeft:"5px"}}>
+        <div  >
         <Button
           variant="contained"
-          
+         
           
           style={{ backgroundColor:"#F9C74F"}}>
-          Add to Cart  
+          Save for Later  
         </Button>
         </div>
         <div style={{paddingLeft:"5px"}}>
         <Button
           variant="contained"
-          
+          xs={12}
           
           style={{ backgroundColor:"#F9C74F"}}>
-          Buy Now 
+          Remove
         </Button>
         </div>
       </ButtonGroup>

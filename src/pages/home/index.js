@@ -8,17 +8,20 @@ import ProductCard from './ProductPage'
 import ProductPage from './ProductDetailsPage'
 import CartPage from './CartPage'
 import PaymentPage from './PaymentPage'
+import RepairFixPage from './RepairFIx'
+import ServiceManPage from './ServiceMan'
 export default function index() {
     return (
         <HomeLayout>
             <Route exact path='/home' component={HomePage}/>
             <Route exact path='/home/login' component={LoginPage}/>
             <Route exact path='/home/register' component={RegisterPage}/>
-            <Route exact path='/home/productListpage' component={RegisterPage}/>
             <Route exact path='/home/productsList' component={ProductCard} />
             <Route exact path='/home/ProductDetailsPage' component={ProductPage} />
             <Route exact path='/home/CartPage' component={CartPage}  />
             <Route exact path='/home/PaymentPage' component={PaymentPage}  />
+            <Route exact path='/home/RepairFixPage' component={RepairFixPage}   />
+            <Route exact path='/home/ServiceManPage' component={ServiceManPage}   />
         </HomeLayout>
     )
 }
